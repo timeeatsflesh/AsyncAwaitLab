@@ -1,6 +1,4 @@
-const fs = require('fs');
-const {promisify} = require('util');
-const readFileAsync = promisify(fs.readFile);
+const { readFile } = require('fs').promises;
 
 const mostFrequentWord = (text) => {
   const words = text.toLowerCase().match(/[^_\W]+/g);
